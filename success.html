@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('picture.jpeg'); /* Background image */
+            background-size: cover; /* Cover the entire viewport */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .success-message {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.8); /* Black background with transparency */
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+            display: inline-block;
+            max-width: 400px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .success-message img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 50%; /* Circular image */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #2e8b57; /* Success color */
+            font-size: 2.5em;
+            margin: 20px 0 0 0;
+            text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5); /* Light shadow for contrast */
+        }
+
+        /* Stylish pattern effect */
+        .success-message::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, transparent 20%, rgba(46, 139, 87, 0.1) 80%);
+            animation: rotatePattern 15s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes rotatePattern {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="success-message">
+        <img src="success.jpg" alt="Success Icon">
+        <h1>Success, Welcome to Tap Foods</h1>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,118 @@
+srd<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            background: #232526; /* Fallback dark background */
+        }
+
+        /* Slideshow container */
+        .slideshow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            animation: slideshow 24s infinite;
+        }
+
+        /* Slideshow animation */
+        @keyframes slideshow {
+            0% { background-image: url('login4.jpeg'); }
+            25% { background-image: url('login2.jpg'); }
+            50% { background-image: url('login3.jpg'); }
+            75% { background-image: url('login4.jpeg'); }
+            100% { background-image: url('login2.jpg'); }
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.8); /* Black background with transparency */
+            padding: 50px;
+            border-radius: 25px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+            z-index: 1; /* Ensure content is above the background */
+            max-width: 350px; /* Smaller width */
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle white border */
+        }
+
+        h1 {
+            margin-bottom: 30px; /* Adjusted margin */
+            color: #E74C3C; /* Red heading color */
+            font-size: 2rem; /* Slightly smaller font size */
+            font-weight: bold;
+        }
+
+        .welcome-heading {
+            font-size: 2.5rem; /* Adjusted font size */
+            color: #E74C3C; /* Red color to match styling */
+            font-weight: bold;
+            text-transform: uppercase;
+            text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
+            margin-bottom: 30px; /* Adjusted margin */
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #2980B9, #2C3E50); /* Gradient background for button */
+            color: white;
+            border: none;
+            padding: 10px 70px; /* Adjusted padding */
+            margin: 10px; /* Adjusted margin */
+            font-size: 16px; /* Adjusted font size */
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 50px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s ease;
+            border: 2px solid transparent; /* Border transition effect */
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #E74C3C, #C0392B); /* Hover gradient effect */
+            transform: translateY(-5px); /* Button hover animation */
+            border: 2px solid #E74C3C; /* Border color on hover */
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+
+        .input-field {
+            margin-bottom: 15px; /* Adjusted margin */
+            padding: 10px; /* Adjusted padding */
+            width: 80%;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            font-size: 14px; /* Adjusted font size */
+        }
+    </style>
+</head>
+<body>
+	<form action="LoginServlet">
+    <div class="slideshow"></div>
+    <div class="container">
+        <h1 class="welcome-heading">Login To Tap Foods</h1>
+        <input type="text" class="input-field" name="userEmail" placeholder="User Email"><br>
+        <input type="password" class="input-field"  name="userPassword" placeholder="Password"><br>
+        <button class="btn" onclick="loginUser()">Login</button>
+    </div>
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>TapFoodApplicationSerSide</display-name>
+  <welcome-file-list>
+    <welcome-file>indexmain.html</welcome-file>
+  </welcome-file-list>
+  
+  <servlet-mapping>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<servlet-class>com.tap.servlet.LoginServlet</servlet-class>
+  </servlet>
+  
+  
+  <servlet-mapping>
+  	<servlet-name>HomeServlet</servlet-name>
+  	<url-pattern>/HomeServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>HomeServlet</servlet-name>
+  	<servlet-class>com.tap.servlet.HomeServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>AddRestaurant</servlet-name>
+  	<url-pattern>/AddRestaurant</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>AddRestaurant</servlet-name>
+  	<servlet-class>com.tap.servlet.AddRestaurant</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>MenuServlet</servlet-name>
+  	<url-pattern>/MenuServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>MenuServlet</servlet-name>
+  	<servlet-class>com.tap.servlet.MenuServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>CartServlet</servlet-name>
+    <url-pattern>/cart</url-pattern>
+	</servlet-mapping>
+  
+ 	<servlet>
+    <servlet-name>CartServlet</servlet-name>
+    <servlet-class>com.tap.servlet.CartServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+    <servlet-name>CheckoutServlet</servlet-name>
+    <url-pattern>/CheckoutServlet</url-pattern>
+	</servlet-mapping>
+  
+ 	<servlet>
+    <servlet-name>CheckoutServlet</servlet-name>
+    <servlet-class>com.tap.servlet.CheckoutServlet</servlet-class>
+	</servlet>
+ 
+  	<servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/LogoutServlet</url-pattern>
+	</servlet-mapping>
+  
+ 	<servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>com.tap.servlet.LogoutServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+    <servlet-name>OrderHistoryServlet</servlet-name>
+    <url-pattern>/OrderHistoryServlet</url-pattern>
+	</servlet-mapping>
+  
+ 	<servlet>
+    <servlet-name>OrderHistoryServlet</servlet-name>
+    <servlet-class>com.tap.servlet.OrderHistoryServlet</servlet-class>
+	</servlet>
+  
+</web-app>
